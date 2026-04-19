@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17.0.0"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="cliente.ControladorCliente"
+      spacing="15.0"
+      alignment="TOP_LEFT"
+      prefWidth="500.0"
+      prefHeight="350.0">
+
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <children>
+
+        <Label fx:id="lblPregunta"
+               text="PREGUNTA"
+               wrapText="true"/>
+
+        <RadioButton fx:id="opA" text="A">
+            <toggleGroup>
+                <ToggleGroup fx:id="grupo"/>
+            </toggleGroup>
+        </RadioButton>
+
+        <RadioButton fx:id="opB" text="B" toggleGroup="$grupo"/>
+        <RadioButton fx:id="opC" text="C" toggleGroup="$grupo"/>
+        <RadioButton fx:id="opD" text="D" toggleGroup="$grupo"/>
+
+        <Button text="Responder" onAction="#responder"/>
+
+        <Label fx:id="lblResultado" text="Resultado"/>
+
+    </children>
+</VBox>
